@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { TodoList } from './TodoList';
+import {AddTodo} from './AddTodo'
+import { useSelector, RootStateOrAny} from 'react-redux'
 
-function App() {
+// import {login} from '../../actions/auth';
+
+
+
+
+const  App=()=> {
+  const itd:Array<Todo>=useSelector((state:RootStateOrAny)=>state.AddTask.Todo)
+
+    // console.log(itd)
+   useEffect(()=>{
+    console.log("Hiiii")
+
+   })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+ <React.Fragment >
+   <div className="todo">
+     <div style={{margin:"2% 3%"}}>
+       <label style={{alignItems:"center",marginLeft:"30%"}}>GROCERRY LIST</label>
+     <AddTodo />
+   </div>
+   <div style={{margin:"4%"}}>
+   <TodoList  todos={itd}/>
+   </div>
+   </div>
+ 
+ </React.Fragment>
   );
 }
+
 
 export default App;

@@ -1,0 +1,55 @@
+html,body{
+margin:0;
+padding:0;
+height: 100%;
+width: 100%;
+}
+body{
+    background-color: blueviolet;
+    background: url("https://i.stack.imgur.com/SvWWN.png") no-repeat fixed ; 
+    background-size: 100% 100%;
+
+}
+.dv{
+  margin: 1px;
+  padding: 1px;
+}
+.todo {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    top:20%;
+    left:30%;
+    height:400px;
+    align-items: center;
+    padding:2rem
+  }
+  
+  .todo:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .li{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 80%;
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin:1px
+  }
+  .tli{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left:50%
+  }
+  .Addtodo{
+      align-items: center;
+  }
