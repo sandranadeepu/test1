@@ -40,7 +40,7 @@ const initialTodos: Array<Todo>=[
   const Delete=(state:any,payload:any)=>{
                    let td=payload["msg"];
                    let Td=state.Todo;
-                  let ft= Td.filter((t:Todo)=>t.text===td.text)
+                  let ft= Td.filter((t:Todo)=>t.text!==td.text)
                     
                    
                console.log(ft,"fts")
